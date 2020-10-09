@@ -1,4 +1,7 @@
-create table helo_users (
+drop table if exists posts;
+drop table if exists users;
+
+create table users (
 id serial primary key,
 username varchar(20),
 password varchar(20),

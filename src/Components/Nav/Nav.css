@@ -1,0 +1,9 @@
+.nav {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 30px;
+}
+
+.link {
+  margin: 10px;
+}
