@@ -40,5 +40,13 @@ module.exports = {
     db.post.get_posts(id)
     .then(posts => res.status(200).send(posts))
     .catch(err => console.log(err))
+  },
+  getPost: (req, res) => {
+    const { id } = req.params;
+    const db = req.app.get('db');
+
+    db.post.get_post(id)
+    .then(post => res.status(200).send(post))
+    .catch(err => console.log(err))
   }
 }

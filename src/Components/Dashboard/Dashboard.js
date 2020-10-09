@@ -33,10 +33,10 @@ class Dashboard extends Component {
 
   render() {
     const mappedPosts = this.state.posts.map((post, i) => (
-      <div key={i} className='post-box'>
+      <Link to={`/posts/${this.state.posts[i].id}`} key={i} className='post-box'>
         <p> Title: {this.state.posts[i].title} </p>
         <p> Poster: {this.state.posts[i].username} </p>
-      </div>
+      </Link>
     ))
     return(
       <div className='dashboard'>
