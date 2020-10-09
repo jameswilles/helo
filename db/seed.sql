@@ -4,7 +4,7 @@ drop table if exists users;
 create table users (
 id serial primary key,
 username varchar(20),
-password varchar(20),
+password varchar(300),
 profile_pic text
 );
 
