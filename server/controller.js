@@ -32,5 +32,13 @@ module.exports = {
     delete foundUser[0].password;
     req.session.user = foundUser[0];
     res.status(202).send(req.session.user);
+  },
+  getPosts: (req, res) => {
+    const { id } = req.params;
+    const db = req.app.get('db');
+
+    db.post.get_posts(id)
+    .then(posts => res.status(200).send(posts))
+    .catch(err => console.log(err))
   }
 }
