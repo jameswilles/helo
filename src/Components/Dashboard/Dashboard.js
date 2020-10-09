@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -11,6 +12,8 @@ class Dashboard extends Component {
       search: '',
       userposts: true
     }
+
+    this.handleInput = this.handleInput.bind('this')
   }
 
   componentDidMount(){
@@ -27,7 +30,7 @@ class Dashboard extends Component {
   }
   }
 
-  handleInput = (event) => {
+  handleInput(event){
     this.setState({[event.target.name]: event.target.value})
   }
 
